@@ -44,12 +44,13 @@ namespace RDA.Project.Kepka.View.Pages.Login_Reg
                 try
                 {
                     if (string.IsNullOrEmpty(TbLogin.Text) ||
+                        password.Length < 6 ||
             string.IsNullOrEmpty(PbPassword.Password))
 
 
 
                     {
-                        MessageBox.Show($"Не все строки заполнены!");
+                        MessageBox.Show($"Не все строки заполнены или пароль меньше 6 символов!");
                     }
                     else
                     {
