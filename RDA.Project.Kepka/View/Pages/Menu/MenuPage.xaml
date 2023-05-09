@@ -1,0 +1,110 @@
+﻿<Page x:Class="RDA.Project.Kepka.View.Pages.Menu.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RDA.Project.Kepka.View.Pages.Menu"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      FontFamily="Comic Sans MS"
+      d:DesignHeight="550" d:DesignWidth="900"
+      Title="MenuPage">
+    <Border Background="AliceBlue">
+        <Grid>
+            <Viewbox>
+                <StackPanel HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Margin="0 0 185 125">
+                    <TextBlock Height="20" Width="50"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Top"
+                               Margin="0 0 0 0">
+                        <Run Text="#Вкепке"/>
+                    </TextBlock>
+                </StackPanel>
+            </Viewbox>
+            <Viewbox>
+                <StackPanel Margin="15 5 0 0"
+                            Orientation="Horizontal">
+                    <Image Source="/images/1.png"
+                           Name="picHolder"
+                           Stretch="Uniform"
+                       Height="15" Width="15"/>
+                    <Button Height="3"
+                            Width="3"
+                            x:Name="BtnNext"
+                            Click="BtnNext_Click"
+                            Margin="0 0 0 0">
+                        <materialDesign:PackIcon Kind="ArrowRight"
+                                             Height="3"
+                                             Margin="0 0 0 0"
+                                             Width="3"/>
+                    </Button>
+
+                </StackPanel>
+            </Viewbox>
+            <Viewbox>
+                <StackPanel HorizontalAlignment="Left"
+                            VerticalAlignment="Bottom"
+                            Margin="0 60 50 0 ">
+                    <TextBlock><Run Text="Приветствую тебя, друг,"/><LineBreak/>
+                    <Run Text="в своём интернет-магазине!"/><LineBreak/>
+                    <Run Text="Здесь ты можешь заказать"/><LineBreak/>
+                    <Run Text="кепку на заказ себе, маме,"/><LineBreak/>
+                    <Run Text="папе, бабушке, дедушке,"/><LineBreak/>
+                    <Run Text="тёте, дяде и всем знакомым!"/><LineBreak/>
+                    <Run Text="Предлагаю ознакомиться с ассортиментом :З"/></TextBlock>
+                </StackPanel>
+            </Viewbox>
+            <Viewbox>
+                <StackPanel HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Orientation="Horizontal"
+                            Height="15"
+
+                            Margin="50 7 0 155">
+                    <Button Background="Transparent"
+                            Foreground="Black"
+                            BorderBrush="Transparent"
+                            x:Name="BtnMaterial"
+                            Click="BtnMaterial_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Материал"
+                                       FontSize="8" Height="15" Width="50">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Background="Transparent"
+                            Foreground="Black"
+                            BorderBrush="Transparent"
+                            x:Name="BtnOrder"
+                            Click="BtnOrder_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Заказать"
+                                       FontSize="8" Height="15" Width="40">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="TextDecorations" Value="Underline" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Viewbox>
+        </Grid>
+    </Border>
+</Page>
